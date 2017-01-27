@@ -9,12 +9,13 @@ const cookieParser = require('cookie-parser');
 const config = require('./config');
 const massive = require('massive');
 //app set up for express
-// const corsOptions = {
-//   origin: 'http://localhost:'+config.port
-// };
+const corsOptions = {
+  origin: 'http://localhost:'+config.port
+};
 const app = express();
 
-app.use(express.static(__dirname + '../public'));
+app.use(express.static(__dirname + '/public'));
+console.log(__dirname);
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
