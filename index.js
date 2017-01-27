@@ -12,7 +12,7 @@ const massive = require('massive');
 const corsOptions = {
   origin: 'http://localhost:'+config.port
 };
-const app = express();
+const app = module.exports = express();
 
 app.use(express.static(__dirname + '/public'));
 console.log(__dirname);
@@ -41,8 +41,6 @@ app.use(passport.session());
 // //declare a db object for requests
 // const db = app.get('db');
 
-//export app
-module.export = app;
 
 app.listen(config.port, function(){
   console.log('listening to port: ', config.port);
