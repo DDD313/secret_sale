@@ -1,6 +1,8 @@
 'use strict';
 
-angular.module('app', ['ui.router']).config(function ($stateProvider, $urlRouterProvider) {
+var myApp = angular.module('myApp', ['ui.router']);
+
+myApp.config(function ($stateProvider, $urlRouterProvider) {
   //default router
   //home page and landing page
   $stateProvider.state('home', {
@@ -13,10 +15,10 @@ angular.module('app', ['ui.router']).config(function ($stateProvider, $urlRouter
 }); //closing
 'use strict';
 
-angular.module('app').service('mainService', function ($http) {}); //closing
-'use strict';
+myApp.service('mainService', function ($http) {}); //closing
+"use strict";
 
-angular.module('app').controller('homeCtrl', function ($scope, $stateParams, mainService, $rootScope) {
+myApp.controller('homeCtrl', function ($scope, $stateParams, mainService, $rootScope) {
   $scope.test = "HELLO WORLD";
 }); //closing
 //# sourceMappingURL=bundle.js.map

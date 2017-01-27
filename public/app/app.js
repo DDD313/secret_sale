@@ -1,6 +1,6 @@
-angular.module('app', ['ui.router'])
+var myApp = angular.module('myApp', ['ui.router']);
 
-.config(function($stateProvider, $urlRouterProvider) {
+myApp.config(function($stateProvider, $urlRouterProvider) {
   //default router
   //home page and landing page
   $stateProvider
