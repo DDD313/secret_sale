@@ -1,6 +1,6 @@
-var myApp = angular.module('myApp', ['ui.router']);
+var myApp = angular.module('myApp', ['ui.router'])
 
-myApp.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
   //default route
   $urlRouterProvider.otherwise('/');
   //home page and landing page
